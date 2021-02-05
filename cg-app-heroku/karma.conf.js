@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/cg-heroku-app'),
+      dir: require('path').join(__dirname, './coverage/cg-app-heroku'),
       subdir: '.',
       reporters: [
         { type: 'html' },

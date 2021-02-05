@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'cg-heroku-app'`, () => {
+  it(`should have as title 'cg-app-heroku'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('cg-heroku-app');
+    expect(app.title).toEqual('cg-app-heroku');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('cg-heroku-app app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('cg-app-heroku app is running!');
   });
 });

@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', async () => {
     await page.navigateTo();
-    expect(await page.getTitleText()).toEqual('cg-heroku-app app is running!');
+    expect(await page.getTitleText()).toEqual('cg-app-heroku app is running!');
   });
 
   afterEach(async () => {
