@@ -1,5 +1,5 @@
 {
-  "name": "cg-heroku-app",
+  "name": "cg-app-heroku",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
