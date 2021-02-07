@@ -23,6 +23,9 @@ export class AppComponent {
       element.addEventListener('click', () => {
         element.style.textDecoration = 'line-through';
       });
+      element.addEventListener('dblclick', () =>{
+        inputContainer.removeChild(element);
+      })
     }
   }
 }
