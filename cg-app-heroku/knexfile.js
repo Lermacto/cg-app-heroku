@@ -19,7 +19,7 @@ module.exports = {
   },
   production: {
     client: 'pg',
-    connection: process.env.DATABASE_URL,
+    connection: process.env.DATABASE_URL+"?ssl=true",
     pool: {
       min: 2,
       max: 10
@@ -27,6 +27,9 @@ module.exports = {
     migrations: {
       tableName: 'knex_migrations',
       directory: './db/migrations'
+    },
+    seeds: {
+      directory: './db/seeds/dev'
     },
     dialect: "postgres",
     dialectOptions: {
