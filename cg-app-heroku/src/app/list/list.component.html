@@ -1,0 +1,13 @@
+<h1>List</h1>
+<p class="alert" id="emptyAlert">{{errEmpty}}</p>
+<div class="inputContainer">
+  <input id="inputField" #elementName /><button id="addElement" (click)="add(elementName.value,false); elementName.value=''">Agregar</button>
+
+  <ng-container *ngIf="listElements">
+    <div *ngFor="let element of listElements">
+      <p *ngIf="element.isStrikedThrough==true; else elseBlock" class="striked-out">{{element.name}}</p>
+      <ng-template #elseBlock> <p (click)="updateStrikeThrough(element)"> {{element.name}}</p> </ng-template>
+    </div>
+  </ng-container>
+
+</div>
