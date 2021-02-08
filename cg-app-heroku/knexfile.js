@@ -1,5 +1,8 @@
 // Update with your config settings.
-
+const pg = require('pg')
+pg.defaults.ssl = {
+  rejectUnauthorized: false,
+};
 module.exports = {
 
   development: {
@@ -19,7 +22,7 @@ module.exports = {
   },
   production: {
     client: 'pg',
-    connection: process.env.DATABASE_URL+"?ssl=true",
+    connection: process.env.DATABASE_URL,
     pool: {
       min: 2,
       max: 10
@@ -31,9 +34,7 @@ module.exports = {
     seeds: {
       directory: './db/seeds/dev'
     },
-    dialect: "postgres",
     dialectOptions: {
-      ssl: true,
       rejectUnauthorized: false,
     }
   }
