@@ -21,7 +21,6 @@ export class ListComponent implements OnInit {
     this.listService.getElements()
       .subscribe(listElements => {
           this.listElements = listElements;
-          console.log(this.listElements);
         });
   }
 
