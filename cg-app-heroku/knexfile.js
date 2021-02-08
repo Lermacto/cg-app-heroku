@@ -27,6 +27,10 @@ module.exports = {
     migrations: {
       tableName: 'knex_migrations',
       directory: './db/migrations'
+    },
+    dialect: "postgres",
+    dialectOptions: {
+      "ssl": true
     }
   }
 };
